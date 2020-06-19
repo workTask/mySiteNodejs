@@ -18,17 +18,15 @@ app.set('view engine', 'hbs')
 
 
 
-//add pages
-app.get("/", (req, res)=>{
+//add pages and use pages
+//app.get("/", (req, res)=>{
     //res.send("Home page")
-    res.render("index.hbs")
-})
+ //   res.render("index.hbs")
+//})
+app.use('/', require('./routes/pages'))
 
 
-app.get("/register", (req, res)=>{
-   // res.send("Register page")
-   res.render("register")
-})
+
 
 
 app.listen(port, (req, res)=>{
