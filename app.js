@@ -9,6 +9,8 @@ const publicDir = path.join(__dirname, './public')
 app.use(express.static(publicDir))
 //console.log(__dirname)
 
+
+
 //connect .hbs file
 app.set('view engine', 'hbs')
 
